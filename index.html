@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" />
+    <title>UMA(ゆーま)'s Web Site</title>
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+            <header class="terminal-logo">
+                <div class="logo terminal-prompt">
+                
+                <a href="/index.html" class="no-style">UMA(ゆーま)'s Web Site</a>
+                
+            </header>
+            <nav class="terminal-menu">
+                <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                    <li>
+                        <a href="/index.html" class="menu-item active"><span>Light</span></a>
+                    </li>
+                    <li class="itemListElement" typeof="ListItem">
+                        <a href="/index.html/dark/" property="item" typeof="WebPage" class="menu-item">
+                            <span property="name">Dark</span>
+                        </a>
+                        <meta property="position" content="1">
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+        <p>This is UMA's Web Site.</p>
+        <hr>
+        <main>
+            <h1>Profile</h1>
+            <div class="profile">
+                <div class="terminal-card" style="margin: 10px;">
+                    <header>About</header>
+                    <div class="about-containts">
+                        <div class="profile_icon">
+                            <img src="img/icon.png" alt="my_icon" class="my_icon">
+                        </div>
+                        <div class="introduction-containts">
+                            <p>名前: UMA(ゆーま)</p>
+                            <p>出身: 広島</p>
+                            <p>所属: 広島市立大学情報科学部B4</p>
+                            <p>部活・サークル: バドミントン部|IE</p>
+                            <p>やってること: セキュリティ(暗号)の研究</p>
+                            <p>言語: 日本語|英語|C/C++</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="links">
+                    <h2>Links</h2>
+                    <!-- X(Twitter) -->
+                    <pre>Twitter: <a href="https://twitter.com/08439_Seq" target="_blank">@08439_Seq</a></pre>
+                    <!-- GitHub -->
+                    <pre>GitHub: <a href="https://github.com/Yu-Ma28051503" target="_blank">Yu-Ma28051503</a></pre>
+                    <!-- Zenn -->
+                    <pre>Zenn: <a href="https://zenn.dev/uma_yuma" target="_blank">UMA(ゆーま)</a></pre>
+                    <!-- Qiita -->
+                    <pre>Qiita: <a href="" target="_blank">UMA_yuma</a></pre>
+                    <!-- IE -->
+                    <pre>いちぴろ・エクスプローラ: <a href="https://ichipiro.net/" target="_blank">IE</a></pre>
+                </div>
+            </div>
+            <hr>
+            <h1>最近の活動</h1>
+            <table class="activities">
+                <thead><tr><th width="1">日付</th><th>内容</th></tr></thead>
+                <!-- 5 latest activities -->
+                <tbody id="activities-containts">
+                    <!-- <tr><td>aaa</td><td><a href="#">bbb</a></td></tr> -->
+                </tbody>
+            </table>
+        </main>
+        <hr>
+        <footer>
+            Copyright&copy; 2023 UMA(ゆーま)
+        </footer>
+    </div>
+    <script src="./js/activities.js"></script>
+</body>
+</html>
