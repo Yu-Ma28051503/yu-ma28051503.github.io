@@ -1,87 +1,166 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesheet.css">
-    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" />
-    <title>UMA(ゆーま)'s Web Site</title>
+    <link rel="stylesheet" href="./style.css">  <!-- 自作CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>UMA(ゆーま)</title>
 </head>
-<body class="terminal">
-    <div class="container">
-        <div class="terminal-nav">
-            <header class="terminal-logo">
-                <div class="logo terminal-prompt">
-                
-                <a href="/index.html" class="no-style">UMA(ゆーま)'s Web Site</a>
-                
-            </header>
-            <nav class="terminal-menu">
-                <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-                    <li>
-                        <a href="/index.html" class="menu-item active"><span>Light</span></a>
-                    </li>
-                    <li class="itemListElement" typeof="ListItem">
-                        <a href="/index.html/dark/" property="item" typeof="WebPage" class="menu-item">
-                            <span property="name">Dark</span>
-                        </a>
-                        <meta property="position" content="1">
-                    </li>
-                    <li></li>
-                    <li></li>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">UMA(ゆーま)</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#activities">最近の活動</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#links">LINKS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#myForm">お問い合わせフォーム</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                  </li> -->
                 </ul>
-            </nav>
-        </div>
-        <p>This is UMA's Web Site.</p>
-        <hr>
-        <main>
-            <h1>Profile</h1>
-            <div class="profile">
-                <div class="terminal-card" style="margin: 10px;">
-                    <header>About</header>
-                    <div class="about-containts">
-                        <div class="profile_icon">
-                            <img src="img/icon.png" alt="my_icon" class="my_icon">
-                        </div>
-                        <div class="introduction-containts">
-                            <p>名前: UMA(ゆーま)</p>
-                            <p>出身: 広島</p>
-                            <p>所属: 広島市立大学情報科学部B4</p>
-                            <p>部活・サークル: バドミントン部|IE</p>
-                            <p>やってること: セキュリティ(暗号)の研究</p>
-                            <p>言語: 日本語|英語|C/C++</p>
-                        </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <div class="self_intro">
+            <h2>自己紹介</h2>
+            <div class="card mb-3" style="max-width: 70%">
+                <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./icon.png" class="img-fluid rounded-start" alt="yuma_icon">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">UMA(ゆーま)</h5>
+                    <p class="card-text">
+                        広島市立大学情報科学部情報工学科コミュニケーション講座ネットワーク科学研究グループB4松仁勇磨です．<br>
+                        耐量子計算機暗号について研究をしています．暗号だけでなくネットワークセキュリティやLinuxカーネル，プログラミングにも興味があり日々勉強してます．<br>
+                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 2023/12/08</small></p>
                     </div>
                 </div>
-                <div class="links">
-                    <h2>Links</h2>
-                    <!-- X(Twitter) -->
-                    <pre>Twitter: <a href="https://twitter.com/08439_Seq" target="_blank">@08439_Seq</a></pre>
-                    <!-- GitHub -->
-                    <pre>GitHub: <a href="https://github.com/Yu-Ma28051503" target="_blank">Yu-Ma28051503</a></pre>
-                    <!-- Zenn -->
-                    <pre>Zenn: <a href="https://zenn.dev/uma_yuma" target="_blank">UMA(ゆーま)</a></pre>
-                    <!-- Qiita -->
-                    <pre>Qiita: <a href="" target="_blank">UMA_yuma</a></pre>
-                    <!-- IE -->
-                    <pre>いちぴろ・エクスプローラ: <a href="https://ichipiro.net/" target="_blank">IE</a></pre>
                 </div>
             </div>
-            <hr>
-            <h1>最近の活動</h1>
-            <table class="activities">
-                <thead><tr><th width="1">日付</th><th>内容</th></tr></thead>
-                <!-- 5 latest activities -->
-                <tbody id="activities-containts">
-                    <!-- <tr><td>aaa</td><td><a href="#">bbb</a></td></tr> -->
-                </tbody>
-            </table>
-        </main>
-        <hr>
-        <footer>
-            Copyright&copy; 2023 UMA(ゆーま)
-        </footer>
+        </div>
+
+        <!-- 最近のアクティビティを表示する -->
+        <!-- 日付と内容はjsonファイルから取ってくる -->
+        <h2 id="activities">最近の活動</h2>
+        <table class="table">
+            <thead><tr><th width="1" scope="col">日付</th><th scope="col">内容</th></tr></thead>
+            <tbody id="activities-containts"></tbody>
+        </table>
+
+        <!-- SNSなどなどのリンク集 -->
+        <h2 id="links">LINKS</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!-- 所属しているもののリンク -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  所属
+                </button>
+              </h3>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div><a href="https://www.hiroshima-cu.ac.jp/">広島市立大学</a></div>
+                    <div><a href="https://www2.info.hiroshima-cu.ac.jp/?_gl=1%2A1uqqrcq%2A_gcl_au%2AOTA2ODI0MjgxLjE3MDExNjI1MDY.">情報科学部オリジナルサイト</a></div>
+                    <div><a href="http://www.cne.info.hiroshima-cu.ac.jp/">情報工学科</a></div>
+                    <div><a href="https://www.netsci.info.hiroshima-cu.ac.jp/">ネットワーク科学研究グループ</a></div>
+                    <div><a href="">バドミントン部(Instagram)</a></div>
+                    <div><a href="">いちぴろ・エクスプローラ</a></div>
+                    <!-- <div><a href="">天地創造部(所属していない)</a></div> -->
+                    <!-- <div><a href=""></a></div> -->
+                </div>
+              </div>
+            </div>
+            <!-- SNSのリンク -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  SNS
+                </button>
+              </h3>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div><a href="https://twitter.com/08439_Seq">Twitter</a></div>
+                    <!-- <div><a href="">Instagram</a></div> -->
+                    <!-- <div><a href="">Discord</a></div> -->
+                    <!-- <div><a href="">Mastdon</a></div> -->
+                    <!-- <div><a href="">Missky</a></div> -->
+                    <!-- <div><a href=""></a></div> -->
+                </div>
+              </div>
+            </div>
+            <!-- Zennなどのリンク -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  その他
+                </button>
+              </h3>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <!-- <div><a href="https://yu-ma28051503.github.io/">公開用ページ</a></div> -->
+                    <div><a href="https://qiita.com/UMA_yuma">Qiita</a></div>
+                    <div><a href="https://zenn.dev/uma_yuma">Zenn</a></div>
+                    <!-- <div><a href=""></a></div> -->
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- お問い合わせフォーム -->
+        <!-- ただし，入力はできるが何も送れない -->
+        <h2>お問い合わせフォーム</h2>
+        <form id="myForm">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">お名前</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="広島 皆実">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">メールアドレス</label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">お問い合わせ内容</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="10億円寄付させてください．"></textarea>
+            </div>
+            <div class="mb-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" id="flexSwitchCheckDefault" type="checkbox" role="switch">
+                    <label class="form-ckeck-label"><a href="">規約</a>に同意しますか</label>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary" id="submitButton" disabled>送信</button>
+            </div>
+        </form>
     </div>
+    <footer>
+        <p>&copy; 2023 UMA(ゆーま)</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
     <script src="./js/activities.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
 </html>

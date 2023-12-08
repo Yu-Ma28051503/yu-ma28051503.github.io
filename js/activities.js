@@ -39,7 +39,7 @@
 // fetch版(こっちの方が新しいらしい)
 async function getjson()
 {
-    const url = "../json/activities.json";  // jsonファイルへのパス
+    const url = "./js/activities.json";  // jsonファイルへのパス
     let req = await fetch(url);  // リクエストを送信
     if(req.ok) {  // HTTP status 200-299の場合
         let containts = "";  // 表示させるコンテンツを入れる変数
