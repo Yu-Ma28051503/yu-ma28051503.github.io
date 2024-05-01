@@ -58,5 +58,10 @@
         "date": "2024/04/02",
         "containts": "広島市立大学大学院情報科学研究科に入学しました!",
         "url": null
+    },
+    {
+        "date": "2024/04/30",
+        "containts": "DevSecopsThon at GMO kitaQに参加しました!",
+        "url": "https://developers.gmo.jp/kitaq/devsecopsthon2024/"
     }
 ]
