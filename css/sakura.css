@@ -1,0 +1,66 @@
+/* Sakuraflake animation */
+.sakura-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 花びらのスタイル */
+.sakura {
+    position: absolute;
+    background-color: #ffc0cb; /* 花びらの色 */
+    border-radius: 150% 0 150% 0;
+    animation: sakura 10s linear;
+}
+
+.sakura::after {
+    content: "";
+    position: absolute;
+    top: -14%;
+    left: -10%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc0cb;
+    border-radius: 150% 0 150% 0;
+    transform: rotate(15deg);
+}
+
+/* 花びらのアニメーション */
+@keyframes sakura {
+    0% {
+        opacity: 0; /* 不透明度0 */
+        top: 0; /* ページのいっちゃん上に配置します。 */
+        transform: rotate(0deg); /* 花びらが回転するようにする */
+    }
+    10% {
+        opacity: 1; /* 見えるようにします。 */
+        transform: translateX(5px); /* 横にちょっと動かすようにして、花びらがふらふら落ちるようにする */
+        transform: rotate(360deg);
+    }
+    30% {
+        transform: translateX(-5px);
+        transform: rotate(720deg);
+    }
+    50% {
+        transform: translateX(5px);
+        transform: rotate(1080deg);
+    }
+    70% {
+        transform: translateX(-5px);
+        transform: rotate(1440deg);
+    }
+    90% {
+        opacity: 1; /* この時もまだ見える状態でなくてはいけないので、この様に書いておきます */
+        transform: translateX(-5px);
+        transform: rotate(1800deg);
+    }
+    100% {
+        /* 見えなくして、ページのいっちゃん下に位置するようにします */
+        opacity: 0;
+        top: 100vh;
+        transform: rotate(2160deg);
+    }
+}
