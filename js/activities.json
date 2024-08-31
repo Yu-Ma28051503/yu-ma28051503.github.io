@@ -61,7 +61,7 @@
     },
     {
         "date": "2024/04/30",
-        "containts": "DevSecopsThon at GMO kitaQに参加しました!",
+        "containts": "DevSecOpsThon at GMO kitaQに参加しました!",
         "url": "https://developers.gmo.jp/kitaq/devsecopsthon2024/"
     },
     {
@@ -73,5 +73,10 @@
         "date": "2024/07/12",
         "containts": "IPv6セミナー2024summerに参加しました!",
         "url": "https://www.ipv6hiroshima.jp/%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/ipv6%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC2024summer"
+    },
+    {
+        "date": "2024/08/30",
+        "containts": "FFRIセキュリティ5daysインターンシップ(IoTペンテスト)に参加しました!",
+        "url": null
     }
 ]
