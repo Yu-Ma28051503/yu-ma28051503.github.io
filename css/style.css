@@ -13,11 +13,18 @@ h2 {
     padding-top: 25px;
 }
 
+.simple_icon {
+    height: 100px;
+    width:  100px;
+    fill: #0000ff;
+}
+
 form {
     padding-bottom: 25px;
 }
 
-footer {
+.footer-container {
     padding: 10px;
+    list-style: none;
     text-align: center;
 }
