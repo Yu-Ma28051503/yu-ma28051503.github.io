@@ -93,5 +93,10 @@
         "date": "2024/10/26",
         "containts": "SECCON Beginners 2024 in 岡山に参加しました!",
         "url": "https://www.seccon.jp/13/seccon_beginners/okayama.html"
+    },
+    {
+        "date": "2024/11/07",
+        "containts": "wolfSSLプライベートセミナー2024秋に参加しました!",
+        "url": "https://wolfssl.jp/wolfblog/2024/09/06/wolfssl_privateseminar_2024fall/"
     }
 ]
